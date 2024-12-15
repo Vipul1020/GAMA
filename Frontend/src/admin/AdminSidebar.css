@@ -1,0 +1,122 @@
+/* Sidebar Container */
+.admin-sidebar {
+  width: 260px;
+  height: 100vh;
+  background-color: #2d3e50; /* Refined dark background */
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5); /* Add subtle shadow for depth */
+  font-family: 'Roboto', sans-serif; /* Clean modern font */
+}
+
+/* Sidebar Header */
+.sidebar-header {
+  padding: 20px;
+  background-color: #007bff; /* Accent header color */
+  text-align: center;
+  border-bottom: 1px solid #1a2733; /* Subtle divider */
+}
+
+.sidebar-header h3 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+/* Navigation Menu */
+.sidebar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.nav-item {
+  padding: 15px 20px;
+  border-bottom: 1px solid #3b4d61; /* Divider between items */
+  cursor: pointer;
+}
+
+.nav-item a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  display: block;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-item:hover {
+  background-color: #1c2a3b; /* Slightly darker hover background */
+}
+
+.nav-item:hover a {
+  padding-left: 25px; /* Slide-in effect */
+}
+
+/* Logout Button */
+.nav-item.logout {
+  margin-top: auto; /* Push to the bottom */
+  background-color: #dc3545; /* Danger color for logout */
+}
+
+.nav-item.logout a {
+  font-weight: bold;
+}
+
+.nav-item.logout:hover {
+  background-color: #c82333; /* Darker red for hover */
+}
+
+/* Active Item Styling */
+.nav-item.active a {
+  background-color: #0056b3; /* Highlight active item */
+  padding-left: 25px;
+  font-weight: bold;
+}
+
+.nav-item button {
+  all: unset; /* Reset button styles */
+  position: relative;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  padding: 15px 20px;
+  transition: all 0.3s ease;
+}
+
+.nav-item button:hover {
+  color: #ffffff; /* Ensure text color stays consistent */
+}
+
+.nav-item button::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 5px; /* Hover effect width */
+  height: 100%;
+  background-color: #0056b3; /* Darker primary color */
+  transform: scaleX(0); /* Initially hidden */
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.nav-item button:hover::before {
+  transform: scaleX(1); /* Expand to full width */
+}
+
+.nav-item.logout button::before {
+  background-color: #c82333; /* Different color for logout */
+}
+
+.nav-item.logout button:hover::before {
+  transform: scaleX(1); /* Expand for logout hover */
+}

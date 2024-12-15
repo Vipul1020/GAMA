@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap'); /* Modern font */
+
+.admin-dashboard-container {
+  display: flex;
+}
+
+.admin-sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #343a40; /* Dark background color */
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.sidebar-header {
+  padding: 20px;
+  background-color: #007bff; /* Primary color */
+  text-align: center;
+}
+
+.sidebar-header h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 500; /* Modern font weight */
+}
+
+.sidebar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.nav-item {
+  padding: 15px 20px;
+  border-bottom: 1px solid #454d55;
+}
+
+.nav-item a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.nav-item:hover a {
+  background-color: #0056b3; /* Darker primary color */
+  padding-left: 30px; /* Slide-in effect */
+}
+
+.nav-item:last-child {
+  margin-top: auto;
+  background-color: #dc3545; /* Red for logout */
+}
+
+.nav-item:last-child a {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.nav-item:last-child:hover a {
+  background-color: #c82333; /* Darker red on hover */
+}
+
+.admin-dashboard-content {
+  flex-grow: 1;
+  padding-left: 250px; /* Account for the sidebar width */
+  padding: 20px;
+  background-color: #f0f4f8; /* Light background color */
+  color: #333;
+  font-family: 'Roboto', sans-serif; /* Modern font */
+  transition: all 0.3s ease; /* Smooth transitions */
+}
+
+.card {
+  background-color: #ffffff; /* White background for sections */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+.card-title {
+  margin-bottom: 10px;
+  color: #007bff; /* Primary color */
+  font-size: 1.5rem;
+  font-weight: 500; /* Modern font weight */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #e9ecef; /* Light grey background for table header */
+}
+
+.btn {
+  padding: 10px 15px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-right: 5px; /* Add spacing between buttons */
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-green {
+  background-color: #28a745; /* Green color for Edit */
+}
+
+.btn-green:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+.btn-blue {
+  background-color: #007bff; /* Blue color for View Attendance */
+}
+
+.btn-blue:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.btn-red {
+  background-color: #dc3545; /* Red color for Delete */
+}
+
+.btn-red:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
+
+.btn-add {
+  background-color: #007bff; /* Primary color */
+}
+
+.btn-add:hover {
+  background-color: #0056b3; /* Darker primary color */
+}
+
+form {
+  background-color: #ffffff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+form:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+form div {
+  margin-bottom: 10px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+form input[type="text"], form input[type="email"], form input[type="password"], form input[type="datetime-local"], form input[type="checkbox"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s;
+}
+
+form input[type="text"]:focus, form input[type="email"]:focus, form input[type="password"]:focus, form input[type="datetime-local"]:focus, form input[type="checkbox"]:focus {
+  border-color: #007bff; /* Primary color on focus */
+}
+
+form button[type="submit"] {
+  padding: 10px 15px;
+  background-color: #007bff; /* Primary color */
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+form button[type="submit"]:hover {
+  background-color: #0056b3; /* Darker primary color */
+  transform: scale(1.05); /* Slight scale effect on hover */
+}

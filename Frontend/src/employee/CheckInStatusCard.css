@@ -1,0 +1,52 @@
+.status-card {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    color: #fff; /* White text for better contrast */
+    padding: 20px;
+    border-radius: 10px; /* Modern rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    text-align: center; /* Center the content */
+    width: 300px; /* Fixed width for a neat design */
+    margin: 20px auto; /* Center the card horizontally */
+    transition: transform 0.3s ease-in-out; /* Smooth animation */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 200px; /* You can adjust the height if needed */
+  }
+  
+  .status-card.checked-in {
+    background: rgba(0, 128, 0, 0.7); /* Green tint for check-in */
+  }
+  
+  .status-card.checked-out {
+    background: rgba(255, 0, 0, 0.7); /* Red tint for check-out */
+  }
+  
+  .status-card-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .status-message {
+    font-size: 1.5em; /* Larger font size for key messages */
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .status-update {
+    font-size: 1em;
+    opacity: 0.9; /* Slight transparency for supporting text */
+  }
+  
+  .status-card:hover {
+    transform: scale(1.05); /* Scale up slightly on hover for interaction effect */
+  }
+  
+  .status-card-content p {
+    margin: 10px 0;
+    font-size: 0.95em;
+  }
+  
